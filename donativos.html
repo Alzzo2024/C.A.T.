@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="donations-page-title">Donativos - Centro Académico Tradicionalista</title>
+    <link rel="icon" type="image/png" href="images/CATlogo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="donativos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="/" class="logo">
+                <img src="images/CATlogo.png" alt="CAT Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1 data-translate="header-title">Centro Académico</h1>
+                    <h2 data-translate="header-subtitle">Tradicionalista</h2>
+                </div>
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="index.html" class="dropdown-trigger" data-translate="nav-home">Início</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="https://docs.google.com/forms/d/19uH0J-vqJgFcI3pnGGYU3jXccyD7N5gILXuxEOJJO78/viewform?edit_requested=true" class="dropdown-trigger" data-translate="nav-join">Junta-te</a>
+                        <div class="dropdown-content">
+                            <a href="https://docs.google.com/forms/d/19uH0J-vqJgFcI3pnGGYU3jXccyD7N5gILXuxEOJJO78/viewform?edit_requested=true" data-translate="join-cat">Centro Académico Tradcionalista</a>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7Bq99u7MdxWCcU6WHWtKMyGRxHBMJ83Tf_--1mdj66iXUcQ/viewform" data-translate="join-tl">Tradicionalismo Lusitano</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="contactos.html" class="dropdown-trigger" data-translate="nav-contacts">Contactos</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="donativos.html" class="dropdown-trigger" data-translate="nav-donations">Donativos</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="language-selector">
+                <button class="translate-btn">
+                    <img src="images/translate.png" alt="Translate" class="translate-icon">
+                </button>
+                <div class="language-options">
+                    <button class="language-option" data-lang="pt">
+                        <img src="images/Portugalflag.png" alt="PT">
+                        <span>Portuguez</span>
+                    </button>
+                    <button class="language-option" data-lang="en">
+                        <img src="images/Flag_of_England.svg.png" alt="EN">
+                        <span>English</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="donation-hero">
+            <div class="donation-hero-content">
+                <h1 class="animate-title" data-translate="donate-hero-title">Apoie o Tradicionalismo</h1>
+                <p class="animate-text" data-translate="donate-hero-subtitle">Contribua para a preservação dos valores tradicionaes</p>
+            </div>
+        </section>
+
+        <section class="donation-section">
+            <div class="container">
+                <div class="donation-card">
+                    <div class="card-header">
+                        <img src="images/wisewallet.png" alt="Wise" class="wise-logo">
+                        <h2 data-translate="choose-amount-title">Escolha o Montante</h2>
+                    </div>
+                    
+                    <div class="amount-grid">
+                        <button class="amount-option" data-amount="5">5€</button>
+                        <button class="amount-option" data-amount="10">10€</button>
+                        <button class="amount-option" data-amount="20">20€</button>
+                        <button class="amount-option" data-amount="50">50€</button>
+                        <button class="amount-option" data-amount="100">100€</button>
+                        <button class="amount-option" data-amount="200">200€</button>
+                        <div class="custom-input">
+                            <input type="number" id="customAmount" data-translate="other-amount-placeholder" placeholder="Outro valor">
+                        </div>
+                    </div>
+
+                    <div class="selected-amount">
+                        <span data-translate="selected-amount">Montante seleccionado:</span>
+                        <span id="displayAmount">0€</span>
+                    </div>
+
+                    <a href="https://wise.com/pay/me/gild145" class="donate-button" id="wiseLink" target="_blank">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span data-translate="donate-button">Doar</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand-content">
+                        <img src="images/CATlogo.png" alt="CAT Logo" class="footer-logo">
+                        <div class="footer-brand-text">
+                            <h3 data-translate="footer-title">Centro Académico</h3>
+                            <h4 data-translate="footer-subtitle">Tradicionalista</h4>
+                        </div>
+                    </div>
+                    <p class="footer-motto" data-translate="footer-motto">Tradicionalismo não é obscurantismo.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3 data-translate="footer-links">Hiperligações</h3>
+                    <ul>
+                        <li><a href="index.html" data-translate="nav-home">Início</a></li>
+                        <li><a href="contactos.html" data-translate="nav-contacts">Contactos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-actions">
+                    <h3 data-translate="footer-actions">Acções</h3>
+                    <div class="action-buttons">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7Bq99u7MdxWCcU6WHWtKMyGRxHBMJ83Tf_--1mdj66iXUcQ/viewform" class="footer-button" data-translate="footer-join-tl">Juntar-se ao Tradicionalismo Lusitano</a>
+                        <a href="https://docs.google.com/forms/d/19uH0J-vqJgFcI3pnGGYU3jXccyD7N5gILXuxEOJJO78/viewform?edit_requested=true" class="footer-button" data-translate="footer-join-cat">Juntar-se ao Centro Académico</a>
+                        <a href="donativos.html" class="footer-button" data-translate="footer-donations">Donativos</a>
+                    </div>
+                </div>
+
+                <div class="footer-social">
+                    <h3 data-translate="footer-social">Redes Sociaes</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/15nQ31zjvc/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/centroacademicotradicionalista?igsh=MWJhaWd5Y3A1ODlpYQ==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/CentroAcadeTrad?t=0NT5sMDykOsGHpkxlg8Ntg&s=09" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Centro Académico Tradicionalista. <span data-translate="footer-rights">Todos os direictos reservados.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="donativos.js"></script>
+    <script src="script.js"></script>
+    <script src="translations.js"></script>
+</body>
+</html>
