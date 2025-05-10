@@ -69,6 +69,13 @@ const translations = {
         'ask-event-subtitle': 'Tem uma ideia para um evento tradicionalista? Partilhe connosco e ajude a promover os valores tradicionaes na comunidade académica.',
         'contact-us': 'Contacte-nos',
 
+        //Nova Alvorada
+        'revista-hero-subtitle': 'Revista do Centro Académico Tradicionalista',
+        'revista-intro-title': 'Sobre a Revista',
+        'revista-intro-text': 'A Nova Alvorada é uma publicação do Centro Académico Tradicionalista que visa promover o pensamento tradicionalista portuguez. Com artigos e ensaios, buscamos resgatar os valores perennes da nossa civilização e propor reflexões sobre os desafios contemporâneos à luz da tradição.',
+        'revista-btn-read': 'Ler Edições',
+        'revista-edicoes-title': 'Edições Disponíveis',
+
         // Social Media Section
         'social-title': 'Siga-nos nas Redes Sociaes',
         'social-facebook': 'Facebook',
@@ -157,8 +164,15 @@ const translations = {
         'ask-event-subtitle': 'Do you have an idea for a traditionalist event? Share it with us and help promote traditional values in the academic community.',
         'contact-us': 'Contact us',
 
+        //Nova Alvorada
+        'revista-hero-subtitle': 'Magazine of the Traditionalist Academic Center',
+        'revista-intro-title': 'About the Magazine',
+        'revista-intro-text': 'Nova Alvorada is a publication of the Traditionalist Academic Center that aims to promote traditionalist Portuguese thought. With articles and essays, we seek to rescue the perennial values of our civilization.',
+        'revista-btn-read': 'Read Editions',
+        'revista-edicoes-title': 'Available Editions',
+
         // Social Media Section
-        'social-title': 'Follow Us on Social Media',
+        'social-title' : 'Follow Us on Social Media',
         'social-facebook': 'Facebook',
         'social-instagram': 'Instagram',
         'social-twitter': 'Twitter',
