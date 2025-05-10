@@ -1,0 +1,342 @@
+/* Hero Section */
+.revista-hero {
+    height: 70vh;
+    background-image: linear-gradient(rgba(14, 14, 14, 0.7), rgba(14, 14, 14, 0.7)), url('images/revista-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--header-height);
+    text-align: center;
+}
+
+.revista-hero .hero-content h1 {
+    font-size: 4.5rem;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.revista-hero .hero-content p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Intro Section */
+.revista-intro {
+    padding: 6rem 0;
+    background: var(--primary-color);
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.intro-text h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.intro-actions {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: var(--text-color);
+    border: 2px solid var(--accent-color);
+}
+
+.btn-primary:hover {
+    background: #7a1c2a;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--accent-color);
+}
+
+.btn-secondary:hover {
+    background: rgba(122, 28, 42, 0.1);
+    transform: translateY(-3px);
+}
+
+.intro-image {
+    position: relative;
+    border: 5px solid var(--accent-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.revista-cover {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.intro-image:hover .revista-cover {
+    transform: scale(1.05);
+}
+
+/* Edições Section */
+.edicoes-section {
+    padding: 6rem 0;
+    background: var(--secondary-color);
+}
+
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--accent-color);
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+.edicoes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.edicao-card {
+    background: var(--primary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edicao-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.edicao-cover {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.edicao-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.edicao-card:hover .edicao-cover img {
+    transform: scale(1.1);
+}
+
+.edicao-number {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--accent-color);
+    color: var(--text-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.edicao-info {
+    padding: 2rem;
+}
+
+.edicao-info h3 {
+    font-family: 'Cinzel', serif;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.edicao-info p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.edicao-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.edicao-link:hover {
+    gap: 0.8rem;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1s forwards 0.3s;
+}
+
+.slide-right {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideRight 1s forwards;
+}
+
+.slide-left {
+    opacity: 0;
+    transform: translateX(30px);
+    animation: slideLeft 1s forwards;
+}
+
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: zoomIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .edicoes-grid,
+    .equipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .temas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .intro-grid,
+    .submissao-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .revista-hero .hero-content h1 {
+        font-size: 3.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .edicoes-grid,
+    .equipe-grid,
+    .temas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .revista-hero .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .submissao-form {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+    
+    .revista-hero .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
