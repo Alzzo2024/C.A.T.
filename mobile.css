@@ -354,6 +354,10 @@ body {
     text-align: center;
     transition: transform 0.3s ease;
     border: 1px solid rgba(155, 35, 53, 0.2);
+    height: 100%; /* Garante que todos os boxes tenham a mesma altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .feature-box:hover {
@@ -501,7 +505,7 @@ body {
 .footer-brand-text h4 {
     font-family: 'Cinzel', serif;
     font-size: 1rem;
-        color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 .footer-motto {
@@ -591,6 +595,7 @@ body {
     height: 40px;
     border-radius: 50%;
     background-color: rgba(155, 35, 53, 0.2);
+    text-decoration: none; /* Adicionado para remover a linha embaixo */
 }
 
 .social-icon:hover {
@@ -602,6 +607,7 @@ body {
 .social-icon svg {
     width: 20px;
     height: 20px;
+    fill: currentColor; /* Garante que o SVG use a cor do elemento pai */
 }
 
 .footer-bottom {
@@ -709,6 +715,18 @@ body {
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    /* Corrigindo os blocos de patrimônio editorial e nova alvorada */
+    .banner-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .banner-box {
+        flex: 0 0 calc(50% - 2rem);
+        margin: 1rem;
+    }
 }
 
 @media (min-width: 768px) {
@@ -767,6 +785,18 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
     
+    .banner-section {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .banner-box {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 400px;
+        margin: 0 1rem;
+    }
+    
     .footer-grid {
         grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
     }
@@ -822,7 +852,8 @@ body {
     top: 0px;
 }
 
-.hamburger span:nth-child(2), .hamburger span:nth-child(3) {
+.hamburger span:nth-child(2), 
+.hamburger span:nth-child(3) {
     top: 8px;
 }
 
