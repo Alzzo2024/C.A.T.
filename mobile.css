@@ -1,276 +1,63 @@
-/* MOBILE CSS - VERSÃO CORRIGIDA */
+/* MOBILE CSS - VERSÃO SIMPLES E FUNCIONAL */
 
-/* Aplicar para tablets e mobile */
 @media screen and (max-width: 768px) {
     
-    /* RESET GERAL - FORÇAR */
-    * {
-        box-sizing: border-box !important;
-    }
-    
+    /* RESET BÁSICO */
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
-        max-width: 100vw !important;
     }
     
-    /* HEADER MOBILE - FORÇAR */
-    .header {
-        padding: 8px 0 !important;
-        height: auto !important;
-        width: 100% !important;
-    }
-    
+    /* HEADER MOBILE */
     .header-container {
-        padding: 0 10px !important;
-        max-width: 100% !important;
-        width: 100% !important;
+        padding: 0 15px !important;
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
-        flex-wrap: nowrap !important;
-        border: none !important; /* REMOVER BORDA VERDE */
     }
     
-    /* LOGO SECTION - REDUZIR E REMOVER BOLA */
-    .logo-section {
-        gap: 8px !important;
-        flex-shrink: 1 !important;
-        min-width: 0 !important;
-        display: flex !important;
-        align-items: center !important;
-    }
-    
-    .logo-section::before,
-    .logo-section::after {
-        display: none !important; /* REMOVER QUALQUER PSEUDO-ELEMENTO */
-    }
-    
+    /* LOGO MENOR */
     .logo {
         height: 30px !important;
-        width: auto !important;
     }
     
     .main-title {
-        font-size: 11px !important;
-        line-height: 1.1 !important;
-        margin: 0 !important;
+        font-size: 12px !important;
     }
     
     .subtitle {
-        font-size: 9px !important;
-        margin: 0 !important;
-        line-height: 1 !important;
-    }
-    
-    /* RIGHT SECTION - COMPACTAR */
-    .right-section {
-        gap: 8px !important;
-        flex-shrink: 0 !important;
-        display: flex !important;
-        align-items: center !important;
-    }
-    
-    .donate-btn {
-        padding: 6px 10px !important;
         font-size: 10px !important;
-        white-space: nowrap !important;
-        min-width: auto !important;
     }
     
-    /* HAMBURGER - FORÇAR APARECER E REMOVER BORDA */
+    /* HAMBURGER VISÍVEL */
     .hamburger-btn {
         display: flex !important;
         flex-direction: column !important;
-        gap: 2px !important;
-        padding: 4px !important;
+        gap: 3px !important;
         background: none !important;
-        border: none !important; /* REMOVER BORDA AZUL */
-        cursor: pointer !important;
-        z-index: 1003 !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        position: relative !important;
-        width: 20px !important;
-        height: 16px !important;
-        outline: none !important; /* REMOVER OUTLINE */
-    }
-    
-    .hamburger-btn:focus {
-        outline: none !important;
         border: none !important;
+        cursor: pointer !important;
+        padding: 5px !important;
     }
     
     .hamburger-btn span {
-        width: 18px !important;
+        width: 20px !important;
         height: 2px !important;
         background-color: white !important;
         display: block !important;
-        transition: all 0.3s !important;
     }
     
-    .hamburger-btn:hover span {
-        background-color: #9C2336 !important;
-    }
-    
-    /* HEADER DIVIDER */
-    .header-divider {
-        top: 50px !important;
-    }
-    
-    /* MAIN CONTENT */
-    .main-content {
-        margin-top: 53px !important;
-    }
-    
-    /* HERO SECTION - MOBILE */
-    .hero-section {
-        height: 50vh !important;
-        min-height: 250px !important;
-        background-attachment: scroll !important;
-        padding: 15px 10px !important;
-        width: 100% !important;
-        max-width: 100vw !important;
-    }
-    
-    .hero-content {
-        padding: 0 10px !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        text-align: center !important;
-    }
-    
-    .hero-title {
-        font-size: 1.8rem !important;
-        line-height: 1.1 !important;
-        margin-bottom: 10px !important;
-        text-align: center !important;
-        word-wrap: break-word !important;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem !important;
-        margin-top: 5px !important;
-    }
-    
-    .hero-motto {
-        font-size: 0.9rem !important;
-        margin-top: 15px !important;
-        text-align: center !important;
-    }
-    
-    /* ABOUT SECTION - MOBILE */
-    .about-section {
-        padding: 40px 0 !important;
-        width: 100% !important;
-    }
-    
-    .about-container {
-        padding: 0 15px !important;
-        max-width: 100% !important;
-        width: 100% !important;
-    }
-    
-    .about-title {
-        font-size: 1.5rem !important;
-        margin-bottom: 20px !important;
-        text-align: center !important;
-        word-wrap: break-word !important;
-    }
-    
-    .about-text {
-        font-size: 0.9rem !important;
-        line-height: 1.5 !important;
-        text-align: left !important;
-        margin: 20px 0 !important;
-        word-wrap: break-word !important;
-    }
-    
-    /* BOTÕES - CORRIGIR COR AZUL */
-    .download-btn,
-    .project-btn,
-    .read-edition-btn,
-    .event-btn,
-    .propose-btn {
-        background-color: #9C2336 !important;
-        color: white !important;
-        border: none !important;
-        text-decoration: none !important;
-        display: inline-block !important;
-        text-align: center !important;
-        cursor: pointer !important;
-        transition: background-color 0.3s !important;
-    }
-    
-    .download-btn:hover,
-    .project-btn:hover,
-    .read-edition-btn:hover,
-    .event-btn:hover,
-    .propose-btn:hover {
-        background-color: #7a1c2a !important;
-        color: white !important;
-        text-decoration: none !important;
-    }
-    
-    .download-btn:visited,
-    .project-btn:visited,
-    .read-edition-btn:visited,
-    .event-btn:visited,
-    .propose-btn:visited {
-        color: white !important;
-        text-decoration: none !important;
-    }
-    
-    .download-btn {
-        padding: 10px 20px !important;
-        font-size: 0.9rem !important;
-        margin: 25px auto !important;
-        display: block !important;
-        width: fit-content !important;
-    }
-    
-    /* PROJECTS GRID - MOBILE */
-    .projects-grid {
-        display: block !important;
-        margin-top: 30px !important;
-        width: 100% !important;
-    }
-    
-    .project-block {
-        margin: 0 15px 20px 15px !important;
-        padding: 20px 15px !important;
-        width: calc(100% - 30px) !important;
-        max-width: calc(100% - 30px) !important;
-        display: block !important;
-    }
-    
-    .project-title {
-        font-size: 1.2rem !important;
-        margin-bottom: 12px !important;
-        text-align: center !important;
-    }
-    
-    .project-btn {
-        padding: 8px 20px !important;
-        font-size: 0.8rem !important;
-        margin-top: 12px !important;
-        display: block !important;
-        width: fit-content !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-    
-    /* SIDE MENU - MOBILE E REMOVER BORDA */
+    /* SIDE MENU */
     .side-menu {
-        width: 250px !important;
-        right: -250px !important;
-        top: 0 !important;
-        height: 100vh !important;
         position: fixed !important;
+        top: 0 !important;
+        right: -280px !important;
+        width: 280px !important;
+        height: 100vh !important;
         background-color: #0e0e0e !important;
-        z-index: 1002 !important;
+        z-index: 1000 !important;
         transition: right 0.3s ease !important;
-        border: none !important; /* REMOVER BORDA AZUL */
+        overflow-y: auto !important;
     }
     
     .side-menu.active {
@@ -278,69 +65,55 @@
     }
     
     .menu-content {
-        padding: 15px !important;
-        height: 100% !important;
+        padding: 20px !important;
     }
     
     .close-btn {
-        font-size: 20px !important;
-        margin-bottom: 15px !important;
-        color: white !important;
         background: none !important;
         border: none !important;
+        color: white !important;
+        font-size: 24px !important;
         cursor: pointer !important;
-        align-self: flex-end !important;
-        display: block !important;
-        margin-left: auto !important;
-        outline: none !important;
+        float: right !important;
+        margin-bottom: 20px !important;
     }
     
     .menu-nav {
         display: flex !important;
         flex-direction: column !important;
-        gap: 15px !important;
+        gap: 0 !important;
     }
     
     .menu-item {
-        font-size: 14px !important;
-        padding: 10px 0 !important;
         color: white !important;
         text-decoration: none !important;
+        padding: 15px 0 !important;
+        border-bottom: 1px solid #333 !important;
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
-        border-bottom: 1px solid #333 !important;
     }
     
     .menu-item:hover {
         color: #9C2336 !important;
     }
     
-    .menu-item:visited {
-        color: white !important;
-    }
-    
-    /* DROPDOWN NO MENU - CORRIGIR LINKS */
-    .menu-item-dropdown {
-        cursor: pointer !important;
-    }
-    
+    /* DROPDOWN */
     .dropdown-content {
         display: none !important;
-        flex-direction: column !important;
+        padding-left: 20px !important;
         margin-top: 10px !important;
-        padding-left: 15px !important;
     }
     
     .dropdown-content.active {
-        display: flex !important;
+        display: block !important;
     }
     
     .dropdown-content a {
         color: #ccc !important;
         text-decoration: none !important;
-        padding: 8px 0 !important;
-        font-size: 12px !important;
+        display: block !important;
+        padding: 10px 0 !important;
         border-bottom: 1px solid #444 !important;
     }
     
@@ -348,15 +121,7 @@
         color: #9C2336 !important;
     }
     
-    .dropdown-content a:visited {
-        color: #ccc !important;
-    }
-    
-    .dropdown-arrow {
-        transition: transform 0.3s !important;
-    }
-    
-    /* MENU OVERLAY */
+    /* OVERLAY */
     .menu-overlay {
         position: fixed !important;
         top: 0 !important;
@@ -375,287 +140,143 @@
         visibility: visible !important;
     }
     
-    /* FOOTER - MOBILE COMPACTO */
-    .footer {
-        padding: 20px 0 !important; /* REDUZIR PADDING */
+    /* HERO MOBILE */
+    .hero-section {
+        height: 50vh !important;
+        background-attachment: scroll !important;
+        padding: 20px 15px !important;
     }
     
-    .footer-container {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        padding: 15px !important; /* REDUZIR PADDING */
+    .hero-title {
+        font-size: 1.8rem !important;
         text-align: center !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        gap: 15px !important; /* ESPAÇAMENTO ENTRE SEÇÕES */
     }
     
-    .footer-logo-section {
-        justify-content: center !important;
-        margin-bottom: 0 !important; /* REMOVER MARGIN EXTRA */
-        display: flex !important;
-        align-items: center !important;
-        gap: 8px !important;
-    }
-    
-    .footer-logo-section::before,
-    .footer-logo-section::after {
-        display: none !important; /* REMOVER BOLA ESTRANHA */
-    }
-    
-    .footer-logo {
-        height: 30px !important; /* REDUZIR TAMANHO */
-    }
-    
-    .footer-main-title {
-        font-size: 12px !important; /* REDUZIR FONTE */
-    }
-    
-    .footer-subtitle {
-        font-size: 10px !important; /* REDUZIR FONTE */
-    }
-    
-    .footer-contact-section {
-        margin: 0 !important; /* REMOVER MARGIN EXTRA */
-    }
-    
-    .footer-section-title {
-        font-size: 1rem !important; /* REDUZIR FONTE */
-        margin-bottom: 8px !important; /* REDUZIR MARGIN */
-    }
-    
-    .footer-contact-info {
-        font-size: 0.8rem !important;
-        line-height: 1.3 !important;
-    }
-    
-    .footer-service-section {
+    .hero-subtitle {
+        font-size: 1rem !important;
         text-align: center !important;
-        margin: 0 !important; /* REMOVER MARGIN EXTRA */
     }
     
-    .footer-copyright-image {
-        width: 150px !important; /* REDUZIR TAMANHO */
-        height: 30px !important;
-    }
-    
-    .copyright-text {
-        font-size: 0.6rem !important; /* REDUZIR FONTE */
-        margin: 5px 0 !important;
-    }
-    
-    .university-text {
-        font-size: 0.5rem !important; /* REDUZIR FONTE */
-        margin: 0 !important;
-    }
-    
-    /* MODAL - MOBILE */
-    .modal-content {
-        width: 90% !important;
-        max-width: 90% !important;
-        padding: 20px !important;
-        margin: 0 !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-    }
-    
-    .modal-title {
-        font-size: 1.3rem !important;
-        margin-bottom: 15px !important;
-    }
-    
-        .modal-social-link {
-        padding: 10px 12px !important;
+    .hero-motto {
         font-size: 0.9rem !important;
+        text-align: center !important;
+    }
+    
+    /* ABOUT MOBILE */
+    .about-container {
+        padding: 0 15px !important;
+    }
+    
+    .about-title {
+        font-size: 1.5rem !important;
+        text-align: center !important;
+    }
+    
+    .about-text {
+        font-size: 0.9rem !important;
+    }
+    
+    /* PROJECTS MOBILE */
+    .projects-grid {
+        display: block !important;
+    }
+    
+    .project-block {
+        margin: 0 15px 20px 15px !important;
+        width: calc(100% - 30px) !important;
+    }
+    
+    .project-title {
+        font-size: 1.2rem !important;
+        text-align: center !important;
+    }
+    
+    /* BOTÕES CORRIGIDOS */
+    .download-btn,
+    .project-btn,
+    .read-edition-btn,
+    .event-btn,
+    .propose-btn,
+    .donate-btn {
         background-color: #9C2336 !important;
         color: white !important;
+        border: none !important;
         text-decoration: none !important;
-        border-radius: 5px !important;
-        margin: 5px !important;
+        padding: 10px 20px !important;
         display: inline-block !important;
+        text-align: center !important;
+        border-radius: 5px !important;
     }
     
-    .modal-social-link:hover {
+    .download-btn:hover,
+    .project-btn:hover,
+    .read-edition-btn:hover,
+    .event-btn:hover,
+    .propose-btn:hover,
+    .donate-btn:hover {
         background-color: #7a1c2a !important;
         color: white !important;
         text-decoration: none !important;
     }
     
-    .modal-social-link:visited {
-        color: white !important;
-        text-decoration: none !important;
-    }
-}
-
-/* MOBILE MUITO PEQUENO */
-@media screen and (max-width: 480px) {
-    
-    .header-container {
-        padding: 0 8px !important;
-    }
-    
-    .logo {
-        height: 25px !important;
-    }
-    
-    .main-title {
-        font-size: 10px !important;
-    }
-    
-    .subtitle {
-        font-size: 8px !important;
-    }
-    
-    .donate-btn {
-        padding: 5px 8px !important;
-        font-size: 9px !important;
-    }
-    
-    .hero-title {
-        font-size: 1.4rem !important;
-    }
-    
-    .hero-motto {
-        font-size: 0.8rem !important;
-    }
-    
-    .about-title {
-        font-size: 1.3rem !important;
-    }
-    
-    .about-text {
-        font-size: 0.8rem !important;
-    }
-    
-    .project-block {
-        margin: 0 10px 15px 10px !important;
-        padding: 15px 10px !important;
-    }
-    
-    .project-title {
-        font-size: 1.1rem !important;
-    }
-    
-    /* FOOTER AINDA MAIS COMPACTO */
+    /* FOOTER MOBILE */
     .footer-container {
-        padding: 10px !important;
-        gap: 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 20px 15px !important;
+        gap: 20px !important;
     }
     
     .footer-logo {
-        height: 25px !important;
+        height: 30px !important;
     }
     
     .footer-main-title {
-        font-size: 10px !important;
+        font-size: 12px !important;
     }
     
     .footer-subtitle {
-        font-size: 8px !important;
+        font-size: 10px !important;
     }
     
     .footer-section-title {
-        font-size: 0.9rem !important;
+        font-size: 1.1rem !important;
+        margin-bottom: 10px !important;
     }
     
     .footer-copyright-image {
-        width: 120px !important;
-        height: 25px !important;
+        width: 150px !important;
+        height: auto !important;
     }
-}
-
-/* NOVA ALVORADA - MOBILE */
-@media screen and (max-width: 768px) {
     
+    .copyright-text {
+        font-size: 0.7rem !important;
+    }
+    
+    .university-text {
+        font-size: 0.6rem !important;
+    }
+    
+    /* NOVA ALVORADA MOBILE */
     .edition-block {
         display: block !important;
         text-align: center !important;
-        padding: 20px 15px !important;
         margin: 0 15px 20px 15px !important;
         width: calc(100% - 30px) !important;
-    }
-    
-    .edition-cover {
-        margin-bottom: 15px !important;
-        text-align: center !important;
     }
     
     .edition-image {
         width: 120px !important;
         height: auto !important;
-        display: block !important;
-        margin: 0 auto !important;
+        margin: 0 auto 15px auto !important;
     }
     
-    .edition-info {
-        text-align: center !important;
-    }
-    
-    .edition-name {
-        font-size: 1.1rem !important;
-        margin-bottom: 8px !important;
-    }
-    
-    .edition-number {
-        font-size: 1rem !important;
-        margin-bottom: 5px !important;
-    }
-    
-    .edition-date {
-        font-size: 0.9rem !important;
-        margin-bottom: 5px !important;
-    }
-    
-    .edition-pages {
-        font-size: 0.9rem !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .read-edition-btn {
-        padding: 8px 15px !important;
-        font-size: 0.8rem !important;
-        display: block !important;
-        width: fit-content !important;
-        margin: 0 auto !important;
-    }
-}
-
-/* EVENTOS - MOBILE */
-@media screen and (max-width: 768px) {
-    
+    /* EVENTOS MOBILE */
     .events-hero-section {
         height: 40vh !important;
-        min-height: 200px !important;
         background-attachment: scroll !important;
-    }
-    
-    .events-filters {
-        display: block !important;
-        text-align: center !important;
-        margin-bottom: 30px !important;
-    }
-    
-    .filter-btn {
-        display: block !important;
-        width: 180px !important;
-        margin: 5px auto !important;
-        padding: 8px 15px !important;
-        font-size: 0.8rem !important;
-        background-color: #9C2336 !important;
-        color: white !important;
-        border: none !important;
-        text-decoration: none !important;
-    }
-    
-    .filter-btn:hover {
-        background-color: #7a1c2a !important;
-        color: white !important;
-    }
-    
-    .filter-btn:visited {
-        color: white !important;
     }
     
     .events-grid {
@@ -667,284 +288,35 @@
         width: calc(100% - 30px) !important;
     }
     
-    .event-image {
-        height: 150px !important;
-    }
-    
-    .event-content {
-        padding: 15px !important;
-    }
-    
-    .event-title {
-        font-size: 1.1rem !important;
-        margin-bottom: 10px !important;
-    }
-    
-    .event-description {
-        font-size: 0.8rem !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .event-btn {
-        padding: 8px 15px !important;
-        font-size: 0.8rem !important;
-        width: 100% !important;
-    }
-    
-    .propose-event-section {
-        padding: 40px 0 !important;
-    }
-    
-    .propose-container {
-        padding: 0 15px !important;
-    }
-    
-    .propose-title {
-        font-size: 1.4rem !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .propose-text {
-        font-size: 0.9rem !important;
-        margin-bottom: 25px !important;
-    }
-    
-    .propose-btn {
-        padding: 10px 20px !important;
-        font-size: 0.9rem !important;
-    }
-    
-    .no-events {
-        padding: 40px 15px !important;
-    }
-    
-    .no-events-title {
-        font-size: 1.3rem !important;
-    }
-    
-    .no-events-text {
-        font-size: 0.9rem !important;
-    }
-}
-
-/* CORREÇÕES ESPECÍFICAS PARA PROBLEMAS COMUNS */
-@media screen and (max-width: 768px) {
-    
-    /* Evitar scroll horizontal */
-    .header,
-    .main-content,
-    .hero-section,
-    .about-section,
-    .footer {
-        width: 100% !important;
-        max-width: 100vw !important;
-        overflow-x: hidden !important;
-    }
-    
-    /* Garantir que imagens não saiam da tela */
-    img {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-    
-    /* Textos que quebram corretamente */
-    h1, h2, h3, h4, h5, h6,
-    .hero-title,
-    .about-title,
-    .project-title,
-    .edition-name,
-    .event-title {
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
-        hyphens: auto !important;
-    }
-    
-    /* Botões responsivos - CORRIGIR CORES */
-    button,
-    .btn,
-    .donate-btn,
-    .download-btn,
-    .project-btn,
-    .read-edition-btn,
-    .event-btn,
-    .propose-btn,
     .filter-btn {
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
+        display: block !important;
+        width: 200px !important;
+        margin: 10px auto !important;
         background-color: #9C2336 !important;
         color: white !important;
         border: none !important;
+        padding: 10px !important;
         text-decoration: none !important;
     }
     
-    button:hover,
-    .btn:hover,
-    .donate-btn:hover,
-    .download-btn:hover,
-    .project-btn:hover,
-    .read-edition-btn:hover,
-    .event-btn:hover,
-    .propose-btn:hover,
     .filter-btn:hover {
         background-color: #7a1c2a !important;
         color: white !important;
-        text-decoration: none !important;
-    }
-    
-    button:visited,
-    .btn:visited,
-    .donate-btn:visited,
-    .download-btn:visited,
-    .project-btn:visited,
-    .read-edition-btn:visited,
-    .event-btn:visited,
-    .propose-btn:visited,
-    .filter-btn:visited {
-        color: white !important;
-        text-decoration: none !important;
-    }
-    
-    /* Links que não quebram layout - CORRIGIR CORES */
-    a {
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
-    }
-    
-    /* Links normais (não botões) */
-    a:not(.btn):not(.download-btn):not(.project-btn):not(.read-edition-btn):not(.event-btn):not(.propose-btn):not(.filter-btn):not(.donate-btn) {
-        color: inherit !important;
-        text-decoration: none !important;
-    }
-    
-    a:not(.btn):not(.download-btn):not(.project-btn):not(.read-edition-btn):not(.event-btn):not(.propose-btn):not(.filter-btn):not(.donate-btn):hover {
-        color: #9C2336 !important;
-        text-decoration: underline !important;
-    }
-    
-    /* Containers que não ultrapassam a tela */
-    .container,
-    .header-container,
-    .about-container,
-    .footer-container,
-    .events-container,
-    .propose-container {
-        width: 100% !important;
-        max-width: 100vw !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        box-sizing: border-box !important;
     }
 }
 
-/* ANIMAÇÕES SUAVES PARA MOBILE */
-@media screen and (max-width: 768px) {
-    
-    .side-menu {
-        transition: right 0.3s ease !important;
+/* MOBILE PEQUENO */
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5rem !important;
     }
     
-    .hamburger-btn span {
-        transition: all 0.2s ease !important;
+    .about-title {
+        font-size: 1.3rem !important;
     }
     
-    .menu-overlay {
-        transition: all 0.3s ease !important;
-    }
-    
-    /* Remover animações pesadas em mobile */
-    .project-block,
-    .event-card,
-    .edition-block {
-        transition: none !important;
-    }
-    
-    .project-block:hover,
-    .event-card:hover,
-    .edition-block:hover {
-        transform: none !important;
-        box-shadow: none !important;
-    }
-    
-    /* Parallax off em mobile */
-    .hero-section,
-    .events-hero-section {
-        background-attachment: scroll !important;
-    }
-}
-
-/* REMOVER BORDAS DE DEBUG E ELEMENTOS ESTRANHOS */
-@media screen and (max-width: 768px) {
-    
-    /* Remover todas as bordas de debug */
-    .hamburger-btn,
-    .side-menu,
-    .header-container {
-        border: none !important;
-    }
-    
-    /* Remover pseudo-elementos que podem criar "bolas" */
-    *::before,
-    *::after {
-        display: none !important;
-    }
-    
-    /* Reativar pseudo-elementos necessários */
-    .hamburger-btn::before,
-    .hamburger-btn::after,
-    .close-btn::before,
-    .close-btn::after {
-        display: block !important;
-    }
-    
-    /* Remover outlines de foco */
-    button:focus,
-    a:focus,
-    input:focus,
-    select:focus,
-    textarea:focus {
-        outline: none !important;
-        border: none !important;
-    }
-    
-    /* Garantir que não há elementos flutuantes estranhos */
-    .logo-section,
-    .footer-logo-section {
-        position: relative !important;
-        z-index: 1 !important;
-    }
-    
-    .logo-section > *,
-    .footer-logo-section > * {
-        position: relative !important;
-        z-index: 2 !important;
-    }
-}
-
-/* CORREÇÃO FINAL PARA MENU DROPDOWN */
-@media screen and (max-width: 768px) {
-    
-    .menu-item-dropdown .dropdown-content a {
-        display: block !important;
-        padding: 8px 0 !important;
-        color: #ccc !important;
-        text-decoration: none !important;
-        font-size: 12px !important;
-        border-bottom: 1px solid #444 !important;
-    }
-    
-    .menu-item-dropdown .dropdown-content a:hover {
-        color: #9C2336 !important;
-        background-color: rgba(156, 35, 54, 0.1) !important;
-    }
-    
-    .menu-item-dropdown .dropdown-content a:visited {
-        color: #ccc !important;
-    }
-    
-    .menu-item-dropdown .dropdown-content a:active {
-        color: #9C2336 !important;
+    .project-block {
+        margin: 0 10px 15px 10px !important;
+        width: calc(100% - 20px) !important;
     }
 }
