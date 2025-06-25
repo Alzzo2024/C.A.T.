@@ -1,0 +1,691 @@
+/* CSS Mobile - Responsividade completa */
+
+/* Tablet - 768px e abaixo */
+@media (max-width: 768px) {
+    /* Header ajustes */
+    .header-container {
+        padding: 0 15px;
+    }
+    
+    .main-title {
+        font-size: 18px;
+    }
+    
+    .subtitle {
+        font-size: 16px;
+    }
+    
+    .logo {
+        height: 45px;
+    }
+    
+    .donate-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    
+    /* Menu lateral ajustes */
+    .side-menu {
+        width: 300px;
+        right: -300px;
+    }
+    
+    /* Hero section */
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-motto {
+        font-size: 1.3rem;
+    }
+    
+    /* About section */
+    .about-section {
+        padding: 60px 0;
+    }
+    
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .about-text {
+        font-size: 1.1rem;
+        margin: 30px auto;
+    }
+    
+    /* Projetos responsivo */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 40px;
+    }
+    
+    .project-block {
+        padding: 30px 25px;
+    }
+    
+    .project-title {
+        font-size: 1.6rem;
+    }
+    
+    /* Footer responsivo */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+        padding: 30px 15px;
+    }
+    
+    .footer-logo-section {
+        justify-content: center;
+    }
+    
+    .footer-service-section {
+        text-align: center;
+    }
+    
+    .social-links {
+        gap: 12px;
+    }
+    
+    .social-link {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .social-link svg {
+        width: 17px;
+        height: 17px;
+    }
+    
+    .footer-copyright-image {
+        width: 250px;
+        height: 50px;
+    }
+    
+    /* Modal ajustes */
+    .modal-content {
+        padding: 30px 25px;
+        width: 95%;
+    }
+    
+    .modal-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Mobile - 480px e abaixo */
+@media (max-width: 480px) {
+    /* Header mobile */
+    .header {
+        padding: 12px 0;
+    }
+    
+    .header-container {
+        padding: 0 10px;
+    }
+    
+    .logo-section {
+        gap: 10px;
+    }
+    
+    .logo {
+        height: 40px;
+    }
+    
+    .main-title {
+        font-size: 16px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+    }
+    
+    .right-section {
+        gap: 10px;
+    }
+    
+    .donate-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .hamburger-btn span {
+        width: 22px;
+        height: 2px;
+    }
+    
+    /* Ajuste do divisor */
+    .header-divider {
+        top: 68px;
+    }
+    
+    .main-content {
+        margin-top: 71px;
+    }
+    
+    /* Menu lateral mobile */
+    .side-menu {
+        width: 280px;
+        right: -280px;
+    }
+    
+    .menu-content {
+        padding: 15px;
+    }
+    
+    .menu-item {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+    
+    .dropdown-item {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    
+    /* Hero section mobile */
+    .hero-section {
+        height: 70vh;
+        min-height: 350px;
+        background-attachment: scroll;
+    }
+    
+    .hero-content {
+        padding: 0 15px;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-motto {
+        font-size: 1.1rem;
+        margin-top: 20px;
+    }
+    
+    /* About section mobile */
+    .about-section {
+        padding: 40px 0;
+    }
+    
+    .about-container {
+        padding: 0 15px;
+    }
+    
+    .about-title {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .about-title::after {
+        width: 60px;
+        height: 2px;
+        bottom: -8px;
+    }
+    
+    .about-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 25px auto;
+    }
+    
+    .download-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        margin: 30px 0 40px 0;
+    }
+    
+    .download-btn::before {
+        width: 16px;
+        height: 16px;
+    }
+    
+    /* Projetos mobile */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 30px;
+    }
+    
+    .project-block {
+        padding: 25px 20px;
+        border-radius: 6px;
+    }
+    
+    .project-title {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    
+    .project-btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    
+    /* Footer mobile */
+    .footer-container {
+        padding: 25px 10px;
+        gap: 25px;
+    }
+    
+    .footer-logo {
+        height: 35px;
+    }
+    
+    .footer-main-title {
+        font-size: 14px;
+    }
+    
+    .footer-subtitle {
+        font-size: 12px;
+    }
+    
+    .footer-section-title {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .social-links {
+        gap: 10px;
+    }
+    
+    .social-link {
+        width: 35px;
+        height: 35px;
+        border-width: 1px;
+    }
+    
+    .social-link svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .footer-email {
+        font-size: 0.9rem;
+        word-break: break-all;
+    }
+    
+    .footer-copyright {
+        padding: 15px 10px;
+    }
+    
+    .footer-copyright-image {
+        width: 200px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    
+    .copyright-text {
+        font-size: 0.8rem;
+        margin-bottom: 3px;
+    }
+    
+    .university-text {
+        font-size: 0.7rem;
+    }
+    
+    /* Modal mobile */
+    .modal-content {
+        padding: 25px 15px;
+        width: 95%;
+        margin: 0 10px;
+        border-radius: 8px;
+    }
+    
+    .modal-close-btn {
+        top: 10px;
+        right: 15px;
+        font-size: 1.8rem;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+    
+    .modal-social-links {
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .modal-social-link {
+        font-size: 1rem;
+        padding: 12px 15px;
+        gap: 12px;
+    }
+    
+    .modal-social-link svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .modal-footer-image img {
+        max-width: 120px;
+    }
+}
+
+/* Mobile muito pequeno - 360px e abaixo */
+@media (max-width: 360px) {
+    .header-container {
+        padding: 0 8px;
+    }
+    
+    .logo {
+        height: 35px;
+    }
+    
+    .main-title {
+        font-size: 14px;
+    }
+    
+    .subtitle {
+        font-size: 12px;
+    }
+    
+    .donate-btn {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-motto {
+        font-size: 1rem;
+    }
+    
+    .about-title {
+        font-size: 1.6rem;
+    }
+    
+    .about-text {
+        font-size: 0.9rem;
+    }
+    
+    .project-title {
+        font-size: 1.2rem;
+    }
+    
+    .download-btn {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+    }
+    
+    .side-menu {
+        width: 260px;
+        right: -260px;
+    }
+    
+    .footer-copyright-image {
+        width: 180px;
+        height: 36px;
+    }
+}
+
+/* Landscape mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        height: 100vh;
+        min-height: 300px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-motto {
+        font-size: 1rem;
+    }
+    
+    .about-section {
+        padding: 30px 0;
+    }
+}
+
+/* Melhorias de toque para mobile */
+@media (max-width: 768px) {
+    /* Aumentar área de toque */
+    .hamburger-btn {
+                padding: 10px;
+        margin: -5px;
+    }
+    
+    .menu-item {
+        padding: 15px 0;
+        margin: 0 -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .dropdown-item {
+        padding: 12px 0;
+        margin: 0 -15px;
+        padding-left: 30px;
+        padding-right: 15px;
+    }
+    
+    .social-link {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    .modal-close-btn {
+        padding: 10px;
+        margin: -10px;
+    }
+    
+    /* Melhorar legibilidade */
+    .about-text {
+        line-height: 1.7;
+    }
+    
+    .project-description {
+        line-height: 1.6;
+    }
+    
+    /* Otimizações de performance para mobile */
+    .hero-section {
+        background-attachment: scroll;
+        will-change: transform;
+    }
+    
+    .side-menu {
+        will-change: transform;
+    }
+    
+    /* Ajustes para telas muito altas */
+    @media (min-height: 800px) {
+        .hero-section {
+            height: 80vh;
+        }
+    }
+    
+    /* Ajustes para telas muito baixas */
+    @media (max-height: 500px) {
+        .hero-section {
+            height: 100vh;
+            min-height: 400px;
+        }
+        
+        .hero-title {
+            font-size: 1.8rem;
+        }
+        
+        .hero-motto {
+            font-size: 1rem;
+        }
+    }
+}
+
+/* Ajustes específicos para iPhone SE e similares */
+@media (max-width: 375px) and (max-height: 667px) {
+    .hero-section {
+        height: 85vh;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .about-section {
+        padding: 35px 0;
+    }
+}
+
+/* Ajustes para tablets em modo retrato */
+@media (min-width: 481px) and (max-width: 768px) {
+    .hero-title {
+        font-size: 3.2rem;
+    }
+    
+    .hero-motto {
+        font-size: 1.4rem;
+    }
+    
+    .about-title {
+        font-size: 2.2rem;
+    }
+    
+    .about-text {
+        font-size: 1.2rem;
+        max-width: 600px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    
+    .project-block {
+        padding: 25px 20px;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+/* Ajustes para modo escuro do sistema */
+@media (prefers-color-scheme: dark) {
+    .modal-overlay {
+        background: rgba(0, 0, 0, 0.9);
+    }
+}
+
+/* Ajustes para usuários que preferem movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .hero-section {
+        background-attachment: scroll;
+    }
+}
+
+/* Ajustes para impressão */
+@media print {
+    .header,
+    .side-menu,
+    .contact-modal,
+    .hamburger-btn,
+    .donate-btn,
+    .download-btn,
+    .project-btn,
+    .social-links {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-top: 0;
+    }
+    
+    .hero-section {
+        height: auto;
+        min-height: auto;
+        padding: 50px 0;
+        background: none;
+        color: black;
+    }
+    
+    .about-section,
+    .projects-section {
+        color: black;
+        background: white;
+    }
+    
+    .footer {
+        color: black;
+        background: white;
+        border-top: 1px solid #ccc;
+    }
+}
+
+/* Ajustes para telas de alta densidade (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo,
+    .footer-logo,
+    .footer-copyright-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Ajustes para hover em dispositivos touch */
+@media (hover: none) and (pointer: coarse) {
+    .menu-item:hover,
+    .dropdown-item:hover,
+    .social-link:hover,
+    .modal-social-link:hover {
+        transform: none;
+    }
+    
+    .project-block:hover {
+        transform: none;
+    }
+    
+    /* Manter apenas mudanças de cor em dispositivos touch */
+    .menu-item:active {
+        color: #9C2336;
+    }
+    
+    .social-link:active {
+        border-color: #9C2336;
+        color: #9C2336;
+    }
+}
+
+/* Melhorias de acessibilidade */
+@media (max-width: 768px) {
+    /* Aumentar contraste para melhor legibilidade */
+    .hero-title,
+    .hero-motto {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Melhorar foco para navegação por teclado */
+    .menu-item:focus,
+    .dropdown-item:focus,
+    .social-link:focus,
+    .donate-btn:focus,
+    .download-btn:focus,
+    .project-btn:focus {
+        outline: 2px solid #9C2336;
+        outline-offset: 2px;
+    }
+    
+    /* Garantir que elementos interativos tenham tamanho mínimo */
+    button,
+    a,
+    .menu-item,
+    .social-link {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
