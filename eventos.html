@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Centro Académico Tradicionalista</title>
+    <link rel="icon" type="image/x-icon" href="img/CATlogo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="eventos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo e texto do lado esquerdo -->
+            <div class="logo-section">
+                <img src="img/CATlogo.png" alt="Logo" class="logo" draggable="true">
+                <div class="text-section">
+                    <h1 class="main-title">CENTRO ACADÉMICO</h1>
+                    <p class="subtitle">TRADICIONALISTA</p>
+                </div>
+            </div>
+            
+            <!-- Lado direito - Botão donativos e menu hamburger -->
+            <div class="right-section">
+                <a href="https://wise.com/pay/me/gild145?" target="_blank" class="donate-btn">DONATIVOS</a>
+                <button class="hamburger-btn" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Divisão entre header e conteúdo principal -->
+    <div class="header-divider"></div>
+    
+    <!-- Menu lateral -->
+    <div class="side-menu" id="sideMenu">
+        <div class="menu-content">
+            <button class="close-btn" onclick="toggleMenu()">&times;</button>
+            
+            <!-- Navegação -->
+            <nav class="menu-nav">
+                <a href="index.html" class="menu-item">INÍCIO</a>
+                <div class="menu-item-dropdown">
+                    <a href="#" class="menu-item dropdown-trigger" onclick="toggleDropdown(event)">
+                        PROJECTOS
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="eventos.html" class="dropdown-item">EVENTOS</a>
+                        <a href="novaalvorada.html" class="dropdown-item">NOVA ALVORADA</a>
+                    </div>
+                </div>
+                <a href="https://docs.google.com/forms/d/19uH0J-vqJgFcI3pnGGYU3jXccyD7N5gILXuxEOJJO78/viewform?edit_requested=true" class="menu-item">JUNTA-TE</a>
+                <a href="#" class="menu-item" onclick="openContactModal()">CONTACTOS</a>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- Overlay para fechar menu -->
+    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+    
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+        <!-- Seção Hero para Eventos -->
+        <section class="events-hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">EVENTOS</h1>
+                <p class="hero-motto">Promovendo a tradição através da cultura</p>
+            </div>
+        </section>
+        
+        <!-- Seção de Eventos -->
+        <section class="events-section">
+            <div class="events-container">
+                <!-- Filtros de Eventos -->
+                <div class="events-filters">
+                    <button class="filter-btn active" onclick="filterEvents('todos')" data-filter="todos">TODOS</button>
+                    <button class="filter-btn" onclick="filterEvents('futuros')" data-filter="futuros">FUTUROS</button>
+                    <button class="filter-btn" onclick="filterEvents('passados')" data-filter="passados">PASSADOS</button>
+                </div>
+                
+                <!-- Lista de Eventos -->
+                <div class="events-grid" id="eventsGrid">
+                    <!-- Evento exemplo -->
+                    <div class="event-card" data-category="passados" data-date="2025-5-23">
+                        <div class="event-image">
+                            <img src="img/869annosmp.png" alt="Conferência Tradicionalista">
+                            <div class="event-date-badge">
+                                <span class="event-day">23</span>
+                                <span class="event-month">MAI</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">CELEBRAÇÃO DA BULA MANIFESTIS PROBATUM</h3>
+                            <p class="event-description">
+                                Celebração da Bula Manifestis Probatum feita pelo Papa
+                                Alexandre III, com missa e jantar entre membros e convidados.
+                            </p>
+                            <div class="event-details">
+                                <div class="event-location">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#9C2336">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                    <span>Egreja de Nossa Senhora da Concepção Velha</span>
+                                </div>
+                                <div class="event-time">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#9C2336">
+                                        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.7L16.2,16.2Z"/>
+                                    </svg>
+                                    <span>19:00 - 20:30</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mensagem quando não há eventos -->
+                <div class="no-events" id="noEvents" style="display: none;">
+                    <div class="no-events-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="#9C2336">
+                            <path d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="no-events-title">NÃO HÁ EVENTOS DISPONÍVEIS</h3>
+                    <p class="no-events-text">Não existem eventos nesta categoria no momento.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Propor Evento -->
+        <section class="propose-event-section">
+            <div class="propose-container">
+                <h2 class="propose-title">TEM UMA IDEIA PARA UM EVENTO?</h2>
+                <p class="propose-text">
+                    Partilhe connosco a sua proposta de evento. Estamos sempre abertos a novas ideias 
+                    que promovam os valores tradicionalistas e a cultura portugueza.
+                </p>
+                <a href="mailto:centro.academico.tradicionalista@gmail.com?subject=Proposta de Evento&body=Olá,%0D%0A%0D%0AGostaria de propor um evento:%0D%0A%0D%0ANome do Evento:%0D%0ADescrição:%0D%0AData Sugerida:%0D%0ALocal Sugerido:%0D%0A%0D%0AObrigado!" class="propose-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                        <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
+                    </svg>
+                    PROPOR EVENTO
+                </a>
+            </div>
+        </section>
+
+        <!-- Modal de Contactos -->
+<div class="contact-modal" id="contactModal">
+    <div class="modal-overlay" onclick="closeContactModal()"></div>
+    <div class="modal-content">
+        <button class="modal-close-btn" onclick="closeContactModal()">&times;</button>
+        <h2 class="modal-title">Contacte-nos</h2>
+        
+        <div class="modal-social-links">
+            <a href="https://www.instagram.com/centroacademicotradicionalista/" target="_blank" class="modal-social-link instagram">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span>Instagram</span>
+            </a>
+            
+            <a href="https://www.facebook.com/profile.php?id=61573088196715" target="_blank" class="modal-social-link facebook">
+                <svg viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                <span>Facebook</span>
+            </a>
+            
+            <a href="https://x.com/CentroAcadeTrad" target="_blank" class="modal-social-link twitter">
+                <svg viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                <span>Twitter</span>
+            </a>
+            
+            <a href="mailto:centro.academico.tradicionalista@gmail.com" class="modal-social-link email">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                <span>Email</span>
+            </a>
+        </div>
+        
+        <div class="modal-footer-image">
+            <img src="img/Deuspatriarei.png" alt="Deus Pátria Rei">
+        </div>
+    </div>
+</div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Linha divisória superior -->
+        <div class="footer-divider"></div>
+        
+        <div class="footer-container">
+            <!-- Logo e texto do lado esquerdo -->
+            <div class="footer-logo-section">
+                <img src="img/CATlogo.png" alt="Logo" class="footer-logo">
+                <div class="footer-text-section">
+                    <h3 class="footer-main-title">CENTRO ACADÉMICO</h3>
+                    <p class="footer-subtitle">TRADICIONALISTA</p>
+                </div>
+            </div>
+            
+            <!-- Centro - Contactos -->
+            <div class="footer-contact-section">
+                <h3 class="footer-section-title">Contacte-nos</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/centroacademicotradicionalista/" class="social-link instagram">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61573088196715" class="social-link facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/CentroAcadeTrad" class="social-link twitter">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Direita - Atendimento -->
+            <div class="footer-service-section">
+                <h3 class="footer-section-title">Atendimento</h3>
+                <a href="mailto:centro.academico.tradicionalista@gmail.com" class="footer-email">
+                    centro.academico.tradicionalista@gmail.com
+                </a>
+            </div>
+        </div>
+        
+        <!-- Linha divisória inferior -->
+        <div class="footer-bottom-divider"></div>
+        
+        <!-- Copyright -->
+        <div class="footer-copyright">
+            <img src="img/Deuspatriarei.png" alt="Logo" class="footer-copyright-image">
+            <p class="copyright-text">2025 Centro Académico Tradicionalista - Todos os direitos reservados</p>
+            <p class="university-text">Universidade de Lisboa</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="eventos.js"></script>
+</body>
+</html>
